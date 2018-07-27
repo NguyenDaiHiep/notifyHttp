@@ -1,0 +1,49 @@
+{
+	"$schema": "http://com.tma.vn/schema#",
+	"title": "Sample POST",
+	"description": "Validate Sample JSON in POST method",
+	"type": "object",
+	"properties": {
+		"eventId": {
+			"type": "string",
+			"description": "The eventId Notification"
+		},
+		"eventTime": {
+			"type": "string",
+			"format": "tmf-apis-date-time"
+		},
+		"eventType": {
+			"type": "string",
+			"description": "eventType Notification"
+		},
+		"event": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": "the id ProductOrder"
+				},
+				"description": {
+					"type": "string",
+					"description": "description ProductOrder"
+				},
+				"state": {
+					"type": "string",
+					"description": "state ProductOrder"
+				},
+				"order_date": {
+					"type": "string"
+				},
+				"modify_date": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"required": [
+		"eventId",
+		"eventTime",
+		"eventType",
+		"event"
+	]
+}

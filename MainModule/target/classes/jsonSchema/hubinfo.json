@@ -1,0 +1,24 @@
+{
+	"$schema": "http://com.tma.vn/schema#",
+	"title": "Sample POST",
+	"description": "Validate Sample JSON in POST method",
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "integer"
+		},
+		"userId": {
+			"type": "string"
+		},
+		"callback": {
+			"type": "string"
+		},
+		"query": {
+			"type": "string"
+		}
+	},
+	"required": [
+		"callback",
+		"query"
+	]
+}

@@ -1,0 +1,160 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ndhiep</groupId>
+  <artifactId>Listener</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Listener Maven Webapp</name>
+ <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <org.springframework-version>4.3.2.RELEASE</org.springframework-version>
+        <logback.version>1.1.3</logback.version>
+        <org.slf4j-version>1.7.12</org.slf4j-version>
+    </properties>
+
+    <dependencies>
+        <!-- Spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework-version}</version>
+            <exclusions>
+                <!-- Exclude Commons Logging in favor of SLF4j -->
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${org.springframework-version}</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>1.8.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${org.slf4j-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${org.slf4j-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+        <!-- @Inject -->
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+        </dependency>
+        <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+</dependency>
+
+        <!-- Servlet -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+        <!-- ORM -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>4.3.8.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>4.3.8.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.2-1003-jdbc4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.10</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.fge/json-schema-core -->
+        <dependency>
+            <groupId>com.github.fge</groupId>
+            <artifactId>json-schema-core</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.fge/json-schema-validator -->
+        <dependency>
+            <groupId>com.github.fge</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>2.2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.interceptor</groupId>
+            <artifactId>javax.interceptor-api</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-joda</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <compilerArgument>-Xlint:all</compilerArgument>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
